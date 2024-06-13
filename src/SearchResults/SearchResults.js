@@ -9,3 +9,5 @@ function SearchResults(props) {
         </section>
     </>);
 }
+
+export default SearchResults;
