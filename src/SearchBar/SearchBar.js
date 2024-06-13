@@ -5,7 +5,7 @@ function SearchBar() {
 
     return (
         <>
-            <input type='text' />
+            <input id='search' type='text' />
         </>
     );
 }
