@@ -1,5 +1,6 @@
 import React from 'react';
 import './SearchResults.module.css';
+import Track from '../Track/Track';
 
 function SearchResults({searchResults}) {
     const tracks = searchResults.map( track => {
