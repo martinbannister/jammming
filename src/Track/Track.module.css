@@ -1,0 +1,9 @@
+.track-card {
+    position: relative;
+    width: 95%;
+    margin: 10px auto;
+    padding: 10px;
+    border: solid 1px green;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
