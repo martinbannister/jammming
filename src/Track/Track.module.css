@@ -7,3 +7,7 @@
     border-radius: 16px;
     background-color: #7dcc55;
 }
+
+.track-card > ul {
+  list-style: none;
+}
