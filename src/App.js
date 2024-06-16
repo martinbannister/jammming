@@ -23,13 +23,13 @@ function App() {
     name: 'Stupid Girl',
     artist: 'Garbage',
     album: 'Garbage',
-    id: 1
+    id: 3
   },
   {
     name: 'When I Grow Up',
     artist: 'Garbage',
     album: 'Version 2',
-    id: 1
+    id: 4
   }
 ]
   );
