@@ -1,11 +1,25 @@
 import React from 'react';
-import './Track.module.css';
+import styles from './Track.module.css';
+
+const trackCard = {
+  position: "relative",
+  width: "95%",
+  margin: "10px auto",
+  padding: "10px",
+  border: "solid 1px green",
+  borderRadius: "16px",
+  backgroundColor: "#7dcc55"
+}
+
+const styleUl = {
+  listStyle: "none"
+}
 
 function Track({data}) {
     return (
         <>
-            <div className='track_card'>
-                <ul key={data.id}>
+            <div style={trackCard}>
+                <ul key={data.id} style={styleUl}>
                   <li key={data.id+'1'}>{data.name}</li>
                   <li key={data.id+'2'}>{data.artist}</li>
                   <li key={data.id+'3'}>{data.album}</li>
