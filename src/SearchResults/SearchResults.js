@@ -17,7 +17,7 @@ function SearchResults({searchResults}) {
     return (
     <>
         <section style={styleContainer}>
-          <Tracklist trackData={searchResults} />
+          <Tracklist trackData={searchResults} origin='search' />
         </section>
     </>);
 }

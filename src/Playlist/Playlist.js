@@ -23,7 +23,7 @@ function Playlist(props) {
             <p>HEADER</p>
           </section>
           <section className="container">
-            <Tracklist trackData={props.data} />
+            <Tracklist trackData={props.data} origin='playlist' />
           </section>
         </div>
       </>

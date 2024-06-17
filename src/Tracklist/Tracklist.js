@@ -7,9 +7,9 @@ const styleTracklist = {
     backgroundColor: '#a0d685'
 }
 
-function Tracklist({trackData}) {
+function Tracklist({trackData, origin}) {
     const tracks = trackData.map( track => {
-      return <Track data={track} />
+      return <Track data={track} origin={origin} />
     });
     return (
         <>
