@@ -5,6 +5,7 @@ import Tracklist from '../Tracklist/Tracklist';
 const styleContainer = {
   position: 'absolute',
   top: '100px',
+  right: '50px',
   width: '30dvw',
   height: 'calc(90dvh - 110px',
   margin: '50px',
