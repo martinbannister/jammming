@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import SearchBar from './SearchBar/SearchBar';
 import SearchResults from './SearchResults/SearchResults';
+import Playlist from './Playlist/Playlist';
 
 function App() {
   const [searchResults, setSearchResults] = useState(
@@ -38,6 +39,7 @@ function App() {
     <div className="App">
       <SearchBar />
       <SearchResults searchResults={searchResults} />
+      <Playlist data={searchResults} />
     </div>
   );
 }
