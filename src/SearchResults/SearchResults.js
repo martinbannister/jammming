@@ -1,6 +1,6 @@
 import React from 'react';
 import './SearchResults.module.css';
-import Track from '../Track/Track';
+import Tracklist from '../Tracklist/Tracklist';
 
 const styleContainer = {
   position: 'absolute',
@@ -14,14 +14,10 @@ const styleContainer = {
 }
 
 function SearchResults({searchResults}) {
-    const tracks = searchResults.map( track => {
-      return <Track data={track} />
-    });
-  
     return (
     <>
         <section style={styleContainer}>
-          {tracks}
+          <Tracklist trackData={searchResults} />
         </section>
     </>);
 }
