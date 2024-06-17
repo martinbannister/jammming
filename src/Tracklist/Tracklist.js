@@ -1,11 +1,20 @@
 import React from 'react';
 import './Tracklist.module.css';
+import Track from '../Track/Track';
 
-function Tracklist(props) {
+const styleTracklist {
+    padding: 5px;
+    background-color: #a0d685;
+}
+
+function Tracklist({trackData}) {
+    const tracks = trackData.map( track => {
+      return <Track data={track} />
+    });
     return (
         <>
-            <section className="container">
-                
+            <section style={styleTracklist}>
+                {tracks}
             </section>
         </>
     );
