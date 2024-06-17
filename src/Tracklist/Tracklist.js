@@ -2,9 +2,9 @@ import React from 'react';
 import './Tracklist.module.css';
 import Track from '../Track/Track';
 
-const styleTracklist {
-    padding: 5px;
-    background-color: #a0d685;
+const styleTracklist = {
+    padding: '5px',
+    backgroundColor: '#a0d685'
 }
 
 function Tracklist({trackData}) {
