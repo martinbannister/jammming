@@ -15,6 +15,12 @@ const styleUl = {
   listStyle: "none"
 }
 
+const styleSymbol = {
+  position: 'absolute',
+  top: '45%',
+  right: '15px'
+}
+
 function Track({data, origin}) {
     let symbol = '';
     switch (origin) {
@@ -34,7 +40,7 @@ function Track({data, origin}) {
               <li key={data.id+'3'}>{data.album}</li>
               <li key={data.id+'4'}>{data.id}</li>
             </ul>
-            <span>{symbol}</span>
+            <span style={styleSymbol}>{symbol}</span>
         </div>
       </>
     );
