@@ -35,11 +35,17 @@ function App() {
 ]
   );
   
+  const [playlist, setPlaylist] = useState([]);
+  
+  const addToPlaylistHandler = newTrack => {
+    setPlaylist( prevPlaylist => [newTrack, ...prevPlaylist]);
+  };
+  
   return (
     <div className="App">
       <SearchBar />
-      <SearchResults searchResults={searchResults} />
-      <Playlist data={searchResults} />
+      <SearchResults searchResults={searchResults} onAddToPlaylist={addToPlaylistHandler} />
+      <Playlist data={playlist} />
     </div>
   );
 }
