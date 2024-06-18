@@ -14,11 +14,11 @@ const styleContainer = {
   textAlign: 'left'
 }
 
-function SearchResults({searchResults}) {
+function SearchResults({searchResults, onAddToPlaylist}) {
     return (
     <>
         <section style={styleContainer}>
-          <Tracklist trackData={searchResults} origin='search' />
+          <Tracklist trackData={searchResults} origin='search' onAddToPlaylist={onAddToPlaylist} />
         </section>
     </>);
 }
