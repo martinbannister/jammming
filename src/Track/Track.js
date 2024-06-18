@@ -21,7 +21,7 @@ const styleSymbol = {
   right: '15px'
 }
 
-function Track({data, origin}) {
+function Track({data, origin, handleClick}) {
     let symbol = '';
     switch (origin) {
       case 'search':
@@ -40,7 +40,7 @@ function Track({data, origin}) {
               <li key={data.id+'3'}>{data.album}</li>
               <li key={data.id+'4'}>{data.id}</li>
             </ul>
-            <span style={styleSymbol}>{symbol}</span>
+            <span style={styleSymbol} onClick={() => handleClick(data)}>{symbol}</span>
         </div>
       </>
     );
