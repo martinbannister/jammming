@@ -7,9 +7,9 @@ const styleTracklist = {
     backgroundColor: '#a0d685'
 }
 
-function Tracklist({trackData, origin}) {
+function Tracklist({trackData, origin, onAddToPlaylist}) {
     const tracks = trackData.map( track => {
-      return <Track data={track} origin={origin} />
+      return <Track data={track} origin={origin} handleClick={onAddToPlaylist} />
     });
     return (
         <>
