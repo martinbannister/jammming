@@ -23,7 +23,7 @@ function Playlist({data, onTakeFromPlaylist}) {
             <p>HEADER</p>
           </section>
           <section className="container">
-            <Tracklist trackData={data} origin='playlist' />
+            <Tracklist trackData={data} origin='playlist' handleClick={onTakeFromPlaylist} />
           </section>
         </div>
       </>
