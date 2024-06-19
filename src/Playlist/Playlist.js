@@ -20,7 +20,9 @@ function Playlist({data, onTakeFromPlaylist}) {
       <>
         <div style={styleContainer}>
           <section className="header">
-            <p>HEADER</p>
+            <h2>Playlist</h2>
+            <label htmlFor="playlistName">Name your playlist</label>
+            <input id="playlistName" type="search" spellcheck="true" />
           </section>
           <section className="container">
             <Tracklist trackData={data} origin='playlist' handleClick={onTakeFromPlaylist} />
