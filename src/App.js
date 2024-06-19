@@ -37,7 +37,7 @@ function App() {
   
   const [playlist, setPlaylist] = useState([]);
   
-  const addToPlaylistHandler = newTrack => {
+  const addToPlaylist = newTrack => {
     const exists = playlist.some( track => newTrack.id === track.id);
     if (!exists) setPlaylist( prevPlaylist => [newTrack, ...prevPlaylist]);
   };
@@ -51,7 +51,7 @@ function App() {
   return (
     <div className="App">
       <SearchBar />
-      <SearchResults searchResults={searchResults} onAddToPlaylist={addToPlaylistHandler} />
+      <SearchResults searchResults={searchResults} onAddToPlaylist={addToPlaylist} />
       <Playlist data={playlist} onTakeFromPlaylist={takeFromPlaylist} />
     </div>
   );
