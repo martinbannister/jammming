@@ -14,7 +14,7 @@ const styleContainer = {
   overflow: 'scroll'
 }
 
-function Playlist(props) {
+function Playlist({data, onTakeFromPlaylist}) {
     
     return (
       <>
@@ -23,7 +23,7 @@ function Playlist(props) {
             <p>HEADER</p>
           </section>
           <section className="container">
-            <Tracklist trackData={props.data} origin='playlist' />
+            <Tracklist trackData={data} origin='playlist' />
           </section>
         </div>
       </>
