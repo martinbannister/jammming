@@ -41,11 +41,17 @@ function App() {
     setPlaylist( prevPlaylist => [newTrack, ...prevPlaylist]);
   };
   
+  const takeFromPlaylist = playlistItem => {
+    setPlaylist( prevPlaylist => prevPlaylist.filter( track => {
+      return track.id != playlistItem.id;
+    }));
+  };
+  
   return (
     <div className="App">
       <SearchBar />
       <SearchResults searchResults={searchResults} onAddToPlaylist={addToPlaylistHandler} />
-      <Playlist data={playlist} />
+      <Playlist data={playlist} onTakeFromPlaylist={takeFromPlaylist} />
     </div>
   );
 }
