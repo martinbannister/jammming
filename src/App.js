@@ -38,7 +38,8 @@ function App() {
   const [playlist, setPlaylist] = useState([]);
   
   const addToPlaylistHandler = newTrack => {
-    setPlaylist( prevPlaylist => [newTrack, ...prevPlaylist]);
+    const exists = playlist.some( track => newTrack.id === track.id);
+    if (!exists) setPlaylist( prevPlaylist => [newTrack, ...prevPlaylist]);
   };
   
   const takeFromPlaylist = playlistItem => {
