@@ -18,7 +18,7 @@ function SearchResults({searchResults, onAddToPlaylist}) {
     return (
     <>
         <section style={styleContainer}>
-          <Tracklist trackData={searchResults} origin='search' onAddToPlaylist={onAddToPlaylist} />
+          <Tracklist trackData={searchResults} origin='search' handleClick={onAddToPlaylist} />
         </section>
     </>);
 }
