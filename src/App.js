@@ -35,11 +35,24 @@ function App() {
 ]
   );
   
-  const [playlist, setPlaylist] = useState([]);
+  const [playlist, setPlaylist] = useState({ name: 'playlist', tracks: [] });
   
   const addToPlaylist = newTrack => {
-    const exists = playlist.some( track => newTrack.id === track.id);
-    if (!exists) setPlaylist( prevPlaylist => [newTrack, ...prevPlaylist]);
+    const exists = playlist.tracks.some( track => newTrack.id === track.id);
+    
+    const newPlaylist = {
+      ...playlist,
+      tracks: [...playlist.tracks, newTrack]
+    };
+    
+    if (!exists) {
+      setPlaylist(newPlaylist);
+      /*
+      setPlaylist( (prevPlaylist) => {
+      {...prevPlaylist, tracks: [...prevPlaylist.tracks, newTrack]}
+      }); */
+    } //[newTrack, ...prevPlaylist]);
+    console.log(playlist);
   };
   
   const takeFromPlaylist = playlistItem => {
