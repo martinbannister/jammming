@@ -22,10 +22,10 @@ function Playlist({data, onTakeFromPlaylist}) {
           <section className="header">
             <h2>Playlist</h2>
             <label htmlFor="playlistName">Name your playlist</label>
-            <input id="playlistName" type="search" spellcheck="true" />
+            <input id="playlistName" type="search" spellCheck="true" value={data.name} />
           </section>
           <section className="container">
-            <Tracklist trackData={data} origin='playlist' handleClick={onTakeFromPlaylist} />
+            <Tracklist trackData={data.tracks} origin='playlist' handleClick={onTakeFromPlaylist} />
           </section>
         </div>
       </>
