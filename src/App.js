@@ -56,9 +56,13 @@ function App() {
   };
   
   const takeFromPlaylist = playlistItem => {
-    setPlaylist( prevPlaylist => prevPlaylist.filter( track => {
-      return track.id != playlistItem.id;
-    }));
+    setPlaylist( prevPlaylist => {
+      return {...prevPlaylist,
+        tracks: prevPlaylist.tracks.filter( track => {
+        return track.id != playlistItem.id;
+      }) //closes filter
+      } //closes object
+    }); //closes set playlist
   };
   
   return (
