@@ -14,7 +14,7 @@ const styleContainer = {
   overflow: 'scroll'
 }
 
-function Playlist({data, onTakeFromPlaylist}) {
+function Playlist({data, onTakeFromPlaylist, onChange}) {
     
     return (
       <>
@@ -22,7 +22,7 @@ function Playlist({data, onTakeFromPlaylist}) {
           <section className="header">
             <h2>Playlist</h2>
             <label htmlFor="playlistName">Name your playlist</label>
-            <input id="playlistName" type="search" spellCheck="true" value={data.name} />
+            <input id="playlistName" type="search" spellCheck="true" value={data.name} onChange={onChange} />
           </section>
           <section className="container">
             <Tracklist trackData={data.tracks} origin='playlist' handleClick={onTakeFromPlaylist} />

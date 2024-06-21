@@ -77,7 +77,7 @@ function App() {
     <div className="App">
       <SearchBar />
       <SearchResults searchResults={searchResults} onAddToPlaylist={addToPlaylist} />
-      <Playlist data={playlist} onTakeFromPlaylist={takeFromPlaylist} />
+      <Playlist data={playlist} onTakeFromPlaylist={takeFromPlaylist} onChange={handleChange} />
     </div>
   );
 }
