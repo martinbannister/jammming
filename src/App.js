@@ -65,6 +65,14 @@ function App() {
     }); //closes set playlist
   };
   
+  // on change handler for input elements, destructuring target from event parameter
+  const handleChange = ({target}) => {
+    // destructure value from target element
+    const {value} = target;
+    // update the name of the playlist using the new value
+    setPlaylist( prevPlaylist => ({...prevPlaylist, name: value}));
+  }
+  
   return (
     <div className="App">
       <SearchBar />
